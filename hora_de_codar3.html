@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+        
+      
+
+
+</head>
+
+
+
+
+
+<body>
+    
+</body>
+</html>
+
+
+<script>
+// EXERCICIO 1
+
+var n1 = parseInt(prompt("Digite o primeiro valor a ser dividido"));
+        var n2 = parseInt(prompt("Digite o segundo valor"));
+        for(var i=0;i<100;i++){
+            if(n2==0 || n2<0){
+                n2 = parseInt(prompt("Digite um valor que não seja 0 ou negativo, por favor."));
+            }
+        }
+        var resultado = n1/n2;
+        document.write("O resultado é: "+resultado);
+
+
+
+// EXERCICIO 2
+
+
+var contagem = 30;
+var intervalo = setInterval(function() {
+ if(contagem>=0){
+ document.write(contagem+"<br>");
+ contagem--;
+   }else{
+clearInterval(intervalo);
+  document.write("EXPLOSÃO");
+    }
+  }, 30);
+
+
+
+
+//EXERCICIO 3
+
+for (var i = 10; i >= 1; i--) {
+  console.log(i);
+}
+
+
+
+  // EXERCICIO 4
+
+  var soma = 0;  
+var contador = 0;  
+
+// Loop para somar os números de 15 a 100
+for (var i = 15; i <= 100; i++) {
+  soma += i;  // Adiciona o número atual à soma
+  contador++;  // Incrementa o contador
+}
+
+// Calcula a média aritmética
+var media = soma / contador;
+
+// Exibe a média
+console.log("A média aritmética dos números entre 15 e 100 é: " + media);
+
+
+
+//EXERCICIO 5
+
+// Solicita os dois números inteiros ao usuário
+var numero1 = parseInt(prompt("Digite o primeiro número inteiro:"));
+var numero2 = parseInt(prompt("Digite o segundo número inteiro (maior que o primeiro):"));
+
+var soma = 0; // Inicializa a variável para armazenar a soma dos números
+var contador = 0; // Inicializa o contador para contar os números
+
+// Loop para somar os números entre numero1 e numero2
+for (var i = numero1; i <= numero2; i++) {
+  soma += i; // Adiciona o número atual à soma
+  contador++; // Incrementa o contador
+}
+
+// Calcula a média aritmética
+var media = soma / contador;
+
+// Exibe a média
+console.log("A média aritmética dos números entre " + numero1 + " e " + numero2 + " é: " + media);
+
+//EXERCICIO 6
+
+
+var r=1;
+var contagemAlunos = 0;
+  do{
+var nota1 = parseFloat(prompt("Digite sua primeira nota"));
+var nota2 = parseFloat(prompt("Digite sua segunda nota"));
+var media = (nota1+nota2)/2;
+   if(media<9.5){
+   console.log("Você foi reprovado.");
+   }else{
+   console.log("Você foi aprovado.");
+    contagemAlunos++
+     }
+     r = parseInt(prompt("Calcular a média de outro(a) aluno(a)? 1-Sim 2-Não"));
+    }while(r==1);
+        console.log(contagemAlunos+" Alunos aprovados.");
+
+
+  //EXERCICIO 7 
+
+
+  var notas = []; // Array para armazenar as notas
+var totalNotas = 6; // Total de notas
+
+// Função para ler uma nota válida (no intervalo de 0 a 10)
+function lerNota(indice) {
+  var nota;
+  do {
+    nota = parseFloat(prompt("Digite a nota " + (indice + 1) + " (0 a 10):"));
+  } while (isNaN(nota) || nota < 0 || nota > 10); // Continua pedindo até que uma nota válida seja inserida
+  return nota;
+}
+
+// Ler as 6 notas do aluno
+for (var i = 0; i < totalNotas; i++) {
+  notas.push(lerNota(i));
+}
+
+// Calcular a média
+var somaNotas = 0;
+for (var i = 0; i < notas.length; i++) {
+  somaNotas += notas[i];
+}
+
+var media = somaNotas / totalNotas;
+
+// Exibir a média
+console.log("A média das notas é: " + media.toFixed(2));
+
+
+//EXERCICIO 8
+
+var n = parseInt(prompt("Digite um valor"));
+for(var i=1;i<=n;i++){
+ document.write(i+" ");
+  }
+
+
+// EXERCICIO 9
+
+var numero = 101; // Inicializa o número com 101, o primeiro número maior que 100
+
+// Loop para imprimir os 10 primeiros números maiores que 100
+for (var i = 1; i <= 10; i++) {
+  console.log(numero);
+  numero++; // Incrementa o número para o próximo
+}
+
+
+// EXERCICIO 10 
+
+var numero = 101; // Inicializa o número com 101, o primeiro número maior que 100
+
+// Loop para imprimir os 10 primeiros números maiores que 100
+for (var i = 1; i <= 10; i++) {
+  console.log(numero);
+  numero++; // Incrementa o número para o próximo
+}
+
+
+//EXERCICIOS 11
+
+var entre = 0;
+var fora = 0;
+  for (var i=0;i<10;i++) {
+var valor = parseInt(prompt("Digite o "+(i + 1)+"º valor"));
+  if (valor>=24 && valor<=42) {
+     entre++;
+    }else {
+  fora++;
+   }
+         }
+   document.write("Há " + entre + " números entre os números 24 e 42 <br>");
+   document.write("Há " + fora + " números que não está entre os números 24 e 42");
+
+
+</script>
